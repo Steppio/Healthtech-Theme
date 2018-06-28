@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+.clear {
+  clear: both; }
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* close commented backslash hack */
+html {
+  font-size: 14pt !important; }
+
+h1, h2, h3, h4, h5, h5, a, p {
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h5 {
+  font-family: "Raleway", Arial, sans-serif !important;
+  text-rendering: optimizelegibility; }
+
+a, p {
+  font-family: "Raleway", Arial, sans-serif !important;
+  text-rendering: optimizelegibility; }
+
+h1 {
+  font-size: 1.4rem;
+  line-height: 1.6; }
+  @media all and (min-width: 1px) {
+    h1 {
+      font-size: 1.4rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      line-height: 1.35; } }
+  @media all and (min-width: 1024px) {
+    h1 {
+      font-size: 1.925rem;
+      line-height: 1.35; } }
+
+h2 {
+  font-size: 1.15rem;
+  line-height: 1.5; }
+  @media all and (min-width: 1px) {
+    h2 {
+      font-size: 1.15rem;
+      line-height: 1.5; } }
+  @media all and (min-width: 768px) {
+    h2 {
+      font-size: 1.2rem;
+      line-height: 1.9; } }
+  @media all and (min-width: 1024px) {
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.5; } }
+
+h3 {
+  font-size: 0.7rem;
+  line-height: 1.4; }
+  @media all and (min-width: 1px) {
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 768px) {
+    h3 {
+      font-size: 1.35rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 1024px) {
+    h3 {
+      font-size: 1.35rem;
+      line-height: 1.4; } }
+
+h4 {
+  font-size: 0.6rem;
+  line-height: 1.4; }
+  @media all and (min-width: 1px) {
+    h4 {
+      font-size: 0.6rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 768px) {
+    h4 {
+      font-size: 0.6rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 1024px) {
+    h4 {
+      font-size: 0.6rem;
+      line-height: 1.4; } }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300; }
+  @media all and (min-width: 1px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.5; } }
+  @media all and (min-width: 768px) {
+    p {
+      font-size: 1.18rem;
+      line-height: 1.65; } }
+  @media all and (min-width: 1024px) {
+    p {
+      font-size: 1.25rem;
+      line-height: 1.4; } }
+
+p small {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 100; }
+  @media all and (min-width: 1px) {
+    p small {
+      font-size: 1rem;
+      line-height: 1.5; } }
+  @media all and (min-width: 768px) {
+    p small {
+      font-size: 0.9rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 1024px) {
+    p small {
+      font-size: 1rem;
+      line-height: 1.4; } }
+
+a {
+  font-size: 0.86rem;
+  line-height: 1.4;
+  text-decoration: none; }
+  @media all and (min-width: 1px) {
+    a {
+      font-size: 0.86rem;
+      line-height: 1.5; } }
+  @media all and (min-width: 768px) {
+    a {
+      font-size: 1.1rem;
+      line-height: 1.4; } }
+  @media all and (min-width: 1024px) {
+    a {
+      font-size: 1rem;
+      line-height: 1.4; } }
+
+html {
+  font-size: 100%;
+  line-height: 1.4; }
+  @media all and (min-width: 1px) {
+    html {
+      font-size: 162.5%; } }
+  @media all and (min-width: 768px) {
+    html {
+      font-size: 162.5%; } }
+  @media all and (min-width: 1024px) {
+    html {
+      font-size: 162.5%; } }
+
+html {
+  background: blue;
+  margin-top: 100px !important; }
