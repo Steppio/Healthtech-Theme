@@ -53,12 +53,13 @@ function get_nova_video( $atts, $content = null ){
 			$videourl = get_post_meta( get_the_ID(),'nova_video_youtube_url', true );	
 			$videoplaybtn = get_post_meta( get_the_ID(),'nova_file', true );	
 			$video_img 	= nova_get_featured_image( $post->ID, 'full', true );
-			$videowidth = get_post_meta( get_the_ID(),'nova_video_width', true ); ?>
+			$videowidth = get_post_meta( get_the_ID(),'nova_video_width', true ); 
+			$videothumbnail = get_post_meta( get_the_ID(),'nova_video_thumbnail', true ); ?>
 
 				<div class="nova-video-inner-container" style="max-width: <?php echo $videowidth; ?>">
 					<div class="play-button"><img src="<?php echo site_url() ?>/wp-content/uploads/2018/06/play-10.png" /></div>
 
-					<?php echo do_shortcode('[video_lightbox_youtube video_id="' . $videourl . '" width="640" height="480" anchor="' . $video_img . '"]'); ?>
+					<?php echo do_shortcode('[video_lightbox_youtube video_id="' . $videourl . '" width="640" height="480" anchor="' . $videothumbnail . '"]'); ?>
 					<?php endwhile; ?>
 				</div>
 		</div>	

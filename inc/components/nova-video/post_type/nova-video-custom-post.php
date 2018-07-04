@@ -208,7 +208,49 @@ function nova_video_height_save_data( $post_id ) {
 add_action( 'save_post', 'nova_video_height_save_data' );
 
 
+/* NOVA VIDEO THUMBNAIL */
+function nova_video_thumbnail() {
+    add_meta_box('nova_video_thumbnail_metabox',
+        __( 'Video Thumbnail URL', 'nova_video' ),
+        'nova_video_thumbnail_cb',
+        'nova_video');
+}
+add_action( 'add_meta_boxes', 'nova_video_thumbnail' );
 
+function nova_video_thumbnail_cb( $post ) {
+    wp_nonce_field( 'nova_video_thumbnail_save_data', 'nova_video_thumbnail_nonce' );
+    $value = get_post_meta( $post->ID, 'nova_video_thumbnail', true  );
+    echo '<input type="text" id="nova_video_thumbnail" name="nova_video_thumbnail" value="' . esc_attr( $value ) . '" size="25" /><br />';
+    echo 'http://i3.ytimg.com/vi/JnMmbBhPfGE/hqdefault.jpg';
+}
+function nova_video_thumbnail_save_data( $post_id ) {
+    if ( ! isset( $_POST['nova_video_thumbnail_nonce'] ) ) {
+        return;
+    }
+    if ( ! wp_verify_nonce( $_POST['nova_video_thumbnail_nonce'], 'nova_video_thumbnail_save_data' ) ) {
+        return;
+    }
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+    if ( isset( $_POST['post_type'] ) && 'nova_video' == $_POST['post_type'] ) {
+
+        if ( ! current_user_can( 'edit_page', $post_id ) ) {
+            return;
+        }
+    } else {
+
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return;
+        }
+    }
+    if ( ! isset( $_POST['nova_video_thumbnail'] ) ) {
+        return;
+    }
+    $link_data = sanitize_text_field( $_POST['nova_video_thumbnail'] );
+    update_post_meta( $post_id, 'nova_video_thumbnail', $link_data );
+}
+    add_action( 'save_post', 'nova_video_thumbnail_save_data' );
 
 
 /* NOVA VIDEO ICON */
